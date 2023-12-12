@@ -6,3 +6,7 @@ Capstone Project for 2023 Fall Math Modeling Course @ Macalester College
 - In this commit, we finish
   1. the paramters
   2. the basic boid behaviors : distance helper function, separation, alignment, cohension, edge turnings, bias introduction, speed limiting, update status
+
+make a graph for cohesion, alignment, separation, and bias
+how to measure the order the flocks
+see the how each effect
