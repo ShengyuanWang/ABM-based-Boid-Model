@@ -5,7 +5,8 @@ class Predator:
 
     def __init__(self, xstr=0, ystr=0,xlim=1000, ylim=1000, vlim=10, turnFactor=0.1, visualRange=100, protectionRange=8,
                  centeringFactor=0.005, avoidFactor=0.05, matchingFactor=0.05, maxSpeed=7, minSpeed=5,maxBias=0.01,
-                 biasIncrement=0.00004, biasValue=0.001, hungry=10):
+                 biasIncrement=0.00004, biasValue=0.001, hungry=10, seed=123):
+        random.seed(seed)
         self.x = random.random()*xlim +xstr# x-position
         self.y = random.random()*ylim +ystr# y-position
         self.vx = random.random() # x-velocity

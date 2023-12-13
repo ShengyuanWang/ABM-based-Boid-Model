@@ -5,7 +5,8 @@ class Boid:
 
     def __init__(self, xstr=0, ystr=0, xlim=1000, ylim=1000, vlim=10, turnFactor=0.3, visualRange=40, protectionRange=8,
                  centeringFactor=0.005, avoidFactor=0.01, matchingFactor=0.5, maxSpeed=6, minSpeed=3, predatorturnfactor=0.5, predatorRange=100, mountainturnfactor=0.05, mountainRange=80, maxBias=0.01,
-                 biasIncrement=0.00004, biasValue=0.001):
+                 biasIncrement=0.00004, biasValue=0.001, seed = 123):
+        random.seed(seed)
         self.x = random.random()*xlim +xstr# x-position
         self.xstr = xstr
         self.ystr = ystr
