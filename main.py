@@ -118,11 +118,11 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
 
-size = 1000
+size = 500
 app = QtWidgets.QApplication([])
-boids = [Boid(xstr=size/3, ystr=size/3,xlim=size/2, ylim=size/2) for _ in range(40)]
-mountains = [Mountain(xlim=size, ylim=size) for _ in range(20)]
-predators = [Predator(xstr=size/3, ystr=size/3,xlim=size/2, ylim=size/2) for _ in range(4)]
+boids = [Boid(xstr=size/3, ystr=size/3,xlim=size/2, ylim=size/2, seed = i) for i in range(40)]
+mountains = [Mountain(xlim=size, ylim=size, seed=i) for i in range(2)]
+predators = [Predator(xstr=size/3, ystr=size/3,xlim=size/2, ylim=size/2, seed=i) for i in range(4)]
 main = MainWindow(boids, mountains, predators, size)
 main.show()
 app.exec()
