@@ -47,7 +47,6 @@ class Predator:
         """
         self.vx += (1-self.biasValue) * self.vx + self.biasValue
         self.vy += (1-self.biasValue) * self.vy + self.biasValue
-        #TODO: we can make the bias value change over time
 
     def catchBoid(self, boids):
         closestBoid = None

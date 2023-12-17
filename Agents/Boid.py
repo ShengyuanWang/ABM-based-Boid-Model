@@ -100,28 +100,6 @@ class Boid:
         return ((centeringX-self.x)**2 + (centeringY-self.y)**2)**0.5 # problems here with the centeringX and centeringY # ignore the visual range
       return 0
 
-    # def cohensionWithoutVisual(self, boids):
-    #   """
-    #     Calculate the velocity of the boid to move towards the center of other boids
-    #   :param boid: the boid to calculate the velocity
-    #   :param boids: all the boids
-    #   :return: the velocity of the boid (x-velocity, y-velocity)
-    #   """
-    #   centeringX, centeringY = 0, 0
-    #   numBoids = 0
-    #   for otherBoid in boids:
-    #     if otherBoid != self:
-    #       centeringX += otherBoid.x
-    #       centeringY += otherBoid.y
-    #       numBoids += 1
-    #   if numBoids > 0:
-    #     centeringX /= numBoids
-    #     centeringY /= numBoids
-    #     self.vx += (centeringX - self.x) * self.centeringFactor
-    #     self.vy += (centeringY - self.y) * self.centeringFactor
-    #     return ((centeringX-self.x)**2 + (centeringY-self.y)**2)**0.5 / numBoids # problems here with the centeringX and centeringY # ignore the visual range
-    #   return 0
-
     def centerPosition(self, boids):
         centeringX, centeringY = 0, 0
         numBoids = 0
@@ -229,33 +207,4 @@ class Boid:
         self.speedLimit()
         self.x += self.vx
         self.y += self.vy
-        # if self.x > rightMargin:
-        #     self.x += leftMargin - rightMargin
-        # elif self.x < leftMargin:
-        #     self.x += rightMargin - leftMargin
-        # if self.y > topMargin:
-        #     self.y += bottomMargin - topMargin
-        # elif self.y < bottomMargin:
-        #     self.y += topMargin - bottomMargin
 
-    # def cohesionWithoutVisual(self, boids, size):
-    #     centeringX, centeringY = 0, 0
-    #     numBoids = 0
-    #     for otherBoid in boids:
-    #         centeringX += otherBoid.x
-    #         centeringY += otherBoid.y
-    #         numBoids += 1
-    #     centeringX /= numBoids
-    #     centeringY /= numBoids
-    #     self.vx += (centeringX - self.x) * self.centeringFactor
-    #     self.vy += (centeringY - self.y) * self.centeringFactor
-    #     if centeringX - self.x < 0:
-    #         difX = min(centeringX - self.x + size, self.x - centeringX)
-    #     else:
-    #         difX = min(centeringX - self.x, self.x - centeringX + size)
-    #     if centeringY - self.y < 0:
-    #         difY = min(centeringY - self.y + size, self.y - centeringY)
-    #     else:
-    #         difY = min(centeringY - self.y, self.y - centeringY + size)
-    #     return ((difX) ** 2 + (
-    #                 difY) ** 2) ** 0.5 / numBoids  # problems here with the centeringX and centeringY # ignore the visual range

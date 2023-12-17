@@ -1,5 +1,3 @@
-# import packages required
-import numpy as np
 import random
 class Mountain:
 
